@@ -240,7 +240,7 @@ $CONFIG['confEmailNotification'] = "ben@onlinewillstorage.com";
 // For example: $CONFIG['confLogFile'] = ".log.txt";
 // Default: $CONFIG['confLogFile'] = "";
 //
-$CONFIG['confLogFile'] = "access.log.txt";
+$CONFIG['confLogFile'] = "./access.log.txt";
 
 /*
  * SYSTEM
