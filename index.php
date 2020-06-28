@@ -1,12 +1,13 @@
 <?php
 /***************************************************************************
  *
- *   Simplex
+ *   Simplex/newtob
  *   1.1
  *
  *   Jongmin Kim
  *   kdzlvaids@gmail.com
- *
+ *   Ben Newton
+ *	 forked
  *   https://github.com/kdzlvaids/Simplex
  *
  *   Based on Encode Explorer 6.4.1 by Marek Rei
@@ -68,7 +69,7 @@ $CONFIG['confNewWindow'] = false;
 // Set it larger than 0 to display the total used space.
 // Default: $CONFIG['confSubfolders'] = 0;
 //
-$CONFIG['confSubfolders'] = 0;
+$CONFIG['confSubfolders'] = 1;
 
 //
 // Will the page header be displayed? 0=no, 1=yes.
@@ -78,16 +79,16 @@ $CONFIG['confShowHeader'] = true;
 
 //
 // The title for the page
-// Default: $CONFIG['confTitle'] = "Simplex";
+// Default: $CONFIG['confTitle'] = "OnlineWillStorage";
 //
-$CONFIG['confTitle'] = "Simplex";
+$CONFIG['confTitle'] = "OnlineWillStorage";
 
 //
 // The secondary page titles, randomly selected and displayed under the main header.
 // For example: $CONFIG['confTitleSub'] = array("Secondary title", "&ldquo;Secondary title with quotes&rdquo;");
 // Default: $CONFIG['confTitleSub'] = array("Simple File Explorer");
 //
-$CONFIG['confTitleSub'] = array("Simple File Explorer");
+$CONFIG['confTitleSub'] = array("Safe has never been so sexy");
 
 //
 // Display breadcrumbs (relative path of the location).
@@ -203,8 +204,9 @@ $CONFIG['confUploadRejectExtension'] = array();
 // in, and to everybody else in this order.
 //
 // See: https://php.net/manual/en/function.chmod.php
-//
 // Default: $CONFIG['confModeNewDir'] = 0755;
+//
+// newtob -> this is r+x for everyone!! change later
 //
 $CONFIG['confModeNewDir'] = 0755;
 
@@ -219,6 +221,7 @@ $CONFIG['confModeNewDir'] = 0755;
 //
 // Default: $CONFIG['confModeNewFile'] = 0644;
 //
+// newtob -> change later
 $CONFIG['confModeNewFile'] = 0644;
  
 /*
@@ -230,14 +233,14 @@ $CONFIG['confModeNewFile'] = 0644;
 // If set, an e-mail will be sent every time someone uploads a file or creates a new dirctory.
 // Default: $CONFIG['confEmailNotification'] = "";
 //
-$CONFIG['confEmailNotification'] = "";
+$CONFIG['confEmailNotification'] = "ben@onlinewillstorage.com";
 
 //
 // Logfile name. If set, a log line will be written there whenever a directory or file is accessed.
 // For example: $CONFIG['confLogFile'] = ".log.txt";
 // Default: $CONFIG['confLogFile'] = "";
 //
-$CONFIG['confLogFile'] = "";
+$CONFIG['confLogFile'] = "access.log.txt";
 
 /*
  * SYSTEM
