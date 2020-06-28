@@ -2500,12 +2500,14 @@ if($this->getConfig("confShowLoadTime") == true)
 <?php
 }
 ?>
+
 <div class="row">
-<div class="col-xs-12 text-center">
-<h4 class="no-strong"><?php if(Simplex::getConfig('confTitle') != null) print Simplex::getConfig('confTitle');?> with <a href="https://github.com/kdzlvaids/Simplex">Simplex</a></h4>
-</div>
+<!--<div class="col-xs-12 text-center">
+<h4 class="no-strong"><?php if(Simplex::getConfig('confTitle') != null) print Simplex::getConfig('confTitle');?></h4>
+</div>-->
 </div><!-- row -->
-</div><!-- container -->
+</div><!-- container --> 
+
 
 <div class="container hidden-xs">
 <?php
