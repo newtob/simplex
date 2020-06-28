@@ -2525,10 +2525,13 @@ if($this->getConfig("confShowLoadTime") == true)
 <?php
 }
 ?>
+
 <div class="row">
+<!--
 <div class="col-sm-8 text-left">
-<h4 class="no-strong"><?php if(Simplex::getConfig('confTitle') != null) print Simplex::getConfig('confTitle');?> with <a href="https://github.com/kdzlvaids/Simplex">Simplex</a></h4>
+<h4 class="no-strong"><?php if(Simplex::getConfig('confTitle') != null) print Simplex::getConfig('confTitle');?> </h4>
 </div>
+-->
 
 <div class="col-sm-1 col-sm-offset-3 pull-right">
 <a href="#simplex"><button class="btn btn-default" type="button" style="margin:3px 0 2px 0;">Top</button></a>
