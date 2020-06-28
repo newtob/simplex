@@ -252,6 +252,7 @@ $CONFIG['confLogFile'] = "./access.log.txt";
 // For example: $CONFIG['confStartDir'] = "./mysubdir/";
 // Default: $CONFIG['confStartDir'] = ".";
 //
+// newtob -> use this base directory setting when a user is logged in
 $CONFIG['confStartDir'] = ".";
 
 //
@@ -1897,7 +1898,7 @@ class Simplex
 		else if($sort_by == "mod")
 			$text = $this->getString("langFileLastmod");
 
-		return "<a href=\"".$this->makeLink(false, $sort_by, $sort_as, null, $this->location->getDir(false, true, false, 0))."#simplex\">{$text}{$img}</a>";
+		return "<a href=\"".$this->makeLink(false, $sort_by, $sort_as, null, $this->location->getDir(false, true, false, 0))."#top\">{$text}{$img}</a>";
 	}
 
 	function makeLink($logout, $sort_by, $sort_as, $delete, $dir)
@@ -2295,12 +2296,12 @@ else
 <div class="row">
 <div class="col-xs-12">
 <p>
-<a href="?dir=/#simplex"><?php print $this->getString("langInfoRoot");?></a> /
+<a href="?dir=/#top"><?php print $this->getString("langInfoRoot");?></a> /
 <?php
 		for($i = 0; $i < count($this->location->path); $i++)
 		{
 			?>
-<a href="<?php print $this->makeLink(false, null, null, null, $this->location->getDir(false, true, false, count($this->location->path) - $i - 1));?>#simplex"><?php print $this->location->getPathLink($i, true);?></a> /
+<a href="<?php print $this->makeLink(false, null, null, null, $this->location->getDir(false, true, false, count($this->location->path) - $i - 1));?>#top"><?php print $this->location->getPathLink($i, true);?></a> /
 <?php
 		}
 		?>
@@ -2332,7 +2333,7 @@ else
 <tbody>
 <tr>
 <td><img alt="dir" src="?img=folder-home"></td>
-<td class="text-left"><a href="<?php print $this->makeLink(false, null, null, null, $this->location->getDir(false, true, false, 1));?>#simplex">..</a></td>
+<td class="text-left"><a href="<?php print $this->makeLink(false, null, null, null, $this->location->getDir(false, true, false, 1));?>#top">..</a></td>
 <td class="hidden-xs"></td>
 <td></td>
 <?php
@@ -2361,7 +2362,7 @@ else
 
 <tr>
 <td><img alt="dir" src="?img=folder"></td>
-<td class="text-left"><a href="<?php print $this->makeLink(false, null, null, null, $this->location->getDir(false, true, false, 0).$dir->getNameEncoded());?>/#simplex"><?php print $dir->getNameHtml();?></a></td>
+<td class="text-left"><a href="<?php print $this->makeLink(false, null, null, null, $this->location->getDir(false, true, false, 0).$dir->getNameEncoded());?>/#top"><?php print $dir->getNameHtml();?></a></td>
 <td class="hidden-xs"></td>
 <td></td>
 <?php
@@ -2534,7 +2535,7 @@ if($this->getConfig("confShowLoadTime") == true)
 -->
 
 <div class="col-sm-1 col-sm-offset-3 pull-right">
-<a href="#simplex"><button class="btn btn-default" type="button" style="margin:3px 0 2px 0;">Top</button></a>
+<a href="#top"><button class="btn btn-default" type="button" style="margin:3px 0 2px 0;">Top</button></a>
 </div>
 </div><!-- row -->
 </div><!-- container -->
